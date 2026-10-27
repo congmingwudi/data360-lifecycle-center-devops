@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>branch_offices_datakit</dataPackageKitDef>
+    <developerName>UploadedFiles1</developerName>
+    <masterLabel>UploadedFiles</masterLabel>
+    <sourceObject>branch_offices_seedcsv_1790638963039</sourceObject>
+    <sourceObjectType>DataStreamTemplate</sourceObjectType>
+    <targetObject>UploadedFiles</targetObject>
+</DataKitObjectDependency>

@@ -1,0 +1,7 @@
+{
+  "packageDirectories": [{ "path": "force-app", "default": true }],
+  "name": "data360-lifecycle-center-devops",
+  "namespace": "",
+  "sfdcLoginUrl": "https://test.salesforce.com",
+  "sourceApiVersion": "64.0"
+}

@@ -1,0 +1,20 @@
+# Metadata DevOps Center / DX Inspector should NOT commit or deploy.
+# Keep this repo scoped to the data-kit experiment — no org-wide config noise.
+
+# Profiles & permission sets: manage in-org, not through this pipeline
+**/profiles/**
+**/permissionsets/**
+
+# Named credentials, connected apps, auth artifacts (re-auth per environment)
+**/connectedApps/**
+**/namedCredentials/**
+
+# Common noise
+**/*.eslintrc.json
+**/.DS_Store
+**/jsconfig.json
+**/lwc/jsconfig.json
+
+# NOTE: Data Cloud data-kit components (data stream bundles, DLOs, mappings,
+# dataPackageKitDefinition, etc.) are intentionally NOT ignored — they are the
+# whole point of this pipeline. Do not add them here.

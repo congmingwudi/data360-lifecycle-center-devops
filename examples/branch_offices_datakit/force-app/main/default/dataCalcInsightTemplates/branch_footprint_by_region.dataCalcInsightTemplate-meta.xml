@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description>Number of branch offices per region and country (Branch_Office__dlm). Added for the data-kit update-only promotion test.</description>
+    <developerName>branch_footprint_by_region</developerName>
+    <expression>SELECT COUNT(Branch_Office__dlm.OfficeCode__c) AS office_count__c, Branch_Office__dlm.Region__c AS region__c, Branch_Office__dlm.Country__c AS country__c FROM Branch_Office__dlm GROUP BY region__c, country__c</expression>
+    <masterLabel>Branch Footprint by Region</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>branch_footprint_by_region</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

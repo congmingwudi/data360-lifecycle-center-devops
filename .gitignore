@@ -1,0 +1,25 @@
+# --- secrets (NEVER commit) ---
+**/.env
+.env
+*.key
+*.pem
+*.p12
+*.jks
+**/secrets/
+
+# --- Salesforce CLI state (machine-specific) ---
+**/.sf/
+**/.sfdx/
+.sf/
+.sfdx/
+
+# --- build/tool noise ---
+**/node_modules/
+**/.DS_Store
+*.log
+
+# --- scratch / working dirs (tmp-cli-validation/, tmp-docs/, …) ---
+/tmp-*/
+
+# --- browser-automation snapshots (Playwright MCP) ---
+/.playwright-mcp/

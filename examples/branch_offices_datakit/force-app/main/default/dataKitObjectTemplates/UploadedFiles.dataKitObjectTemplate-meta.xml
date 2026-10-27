@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;connection&quot;:{&quot;connectorType&quot;:&quot;UploadedFiles&quot;,&quot;method&quot;:&quot;Ingress&quot;,&quot;credentials&quot;:[],&quot;lastModifiedDate&quot;:&quot;2026-09-28T23:14:37.000Z&quot;,&quot;editable&quot;:false,&quot;connectorLabel&quot;:&quot;File Upload&quot;,&quot;lastModifiedBy&quot;:{&quot;name&quot;:&quot;Admin User&quot;,&quot;id&quot;:&quot;005000000000000AAA&quot;,&quot;profilePhotoUrl&quot;:&quot;/img/userprofile/default_profile_45_v2.png&quot;},&quot;deletable&quot;:false,&quot;label&quot;:&quot;UploadedFiles&quot;,&quot;params&quot;:[],&quot;url&quot;:&quot;/services/data/v67.0/ssot/connections/9cgKa000000oYiyIAE&quot;,&quot;accessType&quot;:&quot;Shared&quot;,&quot;createdDate&quot;:&quot;2026-02-24T05:54:24.000Z&quot;,&quot;createdBy&quot;:{&quot;name&quot;:&quot;Admin User&quot;,&quot;id&quot;:&quot;005000000000000AAA&quot;,&quot;profilePhotoUrl&quot;:&quot;/img/userprofile/default_profile_45_v2.png&quot;},&quot;name&quot;:&quot;UploadedFiles&quot;,&quot;namespace&quot;:&quot;&quot;,&quot;iconUrl&quot;:&quot;/cdp/images/connectors/UploadedFiles.svg&quot;,&quot;id&quot;:&quot;9cgKa000000oYiyIAE&quot;,&quot;sentosEnabled&quot;:false,&quot;syncStatus&quot;:&quot;None&quot;,&quot;status&quot;:&quot;Active&quot;}}</entityPayload>
+    <masterLabel>UploadedFiles</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>UploadedFiles</sourceObject>
+    <sourceObjectType>MktDataConnection</sourceObjectType>
+    <templateVersion>2</templateVersion>
+</DataKitObjectTemplate>

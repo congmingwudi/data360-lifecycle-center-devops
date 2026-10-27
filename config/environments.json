@@ -1,0 +1,63 @@
+{
+  "_comment": "Environment registry for the DevOps Center data-kit pipeline. `alias` is the sf CLI org alias and is authoritative; usernames/hosts need not match the alias. Update `status` as each is wired: planned -> connected -> verified.",
+  "project": "data360-lifecycle-center-devops",
+  "hub": {
+    "alias": "afd360-prod",
+    "instanceUrl": "https://<your-hub-my-domain>.lightning.force.com",
+    "username": "<your-hub-admin-username>",
+    "devopsRole": "hub",
+    "type": "production",
+    "alsoServesAs": "production-release-stage",
+    "pipelineStage": "Production",
+    "branch": "main",
+    "note": "Durable DevOps Center Hub org. Work items + pipeline definition live here, AND it is the pipeline's final Production stage (branch main). Chosen over a sandbox because a sandbox refresh resets the Data Cloud tenant and would wipe the control plane. Promoting a data kit to Production deploys it here; Data Cloud is already provisioned in this org (parent prerequisite for sandbox Data Cloud). Appears again in `environments[]` as the Production entry for completeness.",
+    "status": "verified",
+    "dcRole": "home",
+    "dataSpace": "default"
+  },
+  "environments": [
+    {
+      "alias": "afd360-dcdev1",
+      "shortName": "dcdev1",
+      "devopsRole": "development",
+      "pipelineStage": "Development",
+      "hasStageBranch": false,
+      "type": "sandbox",
+      "dcRole": "home",
+      "note": "Where the file-upload data stream -> DLO -> DMO -> data kit is built. Needs Data Cloud provisioned in the sandbox (credits + manual 'Get Started').",
+      "status": "verified",
+      "dataSpace": "default"
+    },
+    {
+      "alias": "afd360-dcstaging1",
+      "shortName": "dcstaging1",
+      "devopsRole": "promotion",
+      "pipelineStage": "Staging",
+      "branch": "dcstaging1",
+      "branchNote": "Intermediate stage branch, NOT main. Created from main via the DevOps Center 'Add Branch' dialog ('Create a branch from main for this stage'). main belongs to the final stage (Production).",
+      "type": "sandbox",
+      "dcRole": "home",
+      "note": "Mid promotion stage between Development and Production. Uses the `default` data space, which already exists (nothing to pre-create). The UploadedFiles connection arrived inactive here and had to be activated. After each install, run scripts/deploy-datakit-components.sh and, the first time, Update File.",
+      "status": "verified",
+      "dataSpace": "default"
+    },
+    {
+      "alias": "afd360-prod",
+      "shortName": "prod",
+      "devopsRole": "promotion",
+      "pipelineStage": "Production",
+      "branch": "main",
+      "type": "production",
+      "note": "Final promotion stage. SAME org as `hub` above (afd360-prod) — it is both the control plane and the Production release target. Promoting to main deploys the data kit here; Data Cloud is already provisioned in prod (parent prerequisite for sandbox Data Cloud).",
+      "status": "verified",
+      "dataSpace": "default",
+      "dcRole": "home"
+    }
+  ],
+  "sourceControl": {
+    "provider": "github",
+    "repo": "<your-pipeline-repo>",
+    "ownedBy": "devops-center",
+    "note": "DevOps Center creates/owns stage branches (dcstaging1 for Staging, main for Production) and auto-creates WI-00000X work-item branches (no feature/ prefix) off dcstaging1. The only other writer is scripts/commit-datakit-to-work-item.sh, which pushes data-kit source to a WI-* branch."
+  }
+}
