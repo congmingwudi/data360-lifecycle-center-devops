@@ -12,7 +12,9 @@ This repo has:
 - an ordered **runbook** in [`plan/`](plan/), with a "done when" check and screenshots for each step,
 - reusable bash **scripts** in [`scripts/`](scripts/README.md) for every step that can be automated,
 - the **sample data** ([`data/branch-offices-seed.csv`](data/branch-offices-seed.csv)) and the
-  resulting **kit metadata** ([`examples/`](examples/README.md)) for the test config.
+  resulting **kit metadata** ([`examples/`](examples/README.md)) for the test config. The fully
+  built-out data kit, as a standalone SFDX project you can deploy with the `sf` CLI, is in
+  [`sf-d360-branches-datakit`](https://github.com/congmingwudi/sf-d360-branches-datakit).
 
 ## The test config in one line
 

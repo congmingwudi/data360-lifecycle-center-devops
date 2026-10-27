@@ -3,6 +3,11 @@
 Reference metadata only. Nothing here is part of the pipeline: the root `sfdx-project.json` lists
 only `force-app/` as a package directory, so Lifecycle Center never inspects or deploys this folder.
 
+> **Want the kit as its own deployable project?** [`sf-d360-branches-datakit`](https://github.com/congmingwudi/sf-d360-branches-datakit)
+> holds the same data kit (calculated insight included) as a standalone Salesforce DX project, with a
+> `manifest/package.xml`, the seed CSV and direct `sf` CLI deploy steps. A check-only deploy of it
+> validated 35/35 components.
+
 ## `branch_offices_datakit/`
 
 The source of the test data kit, `branch_offices_datakit`, as it landed on the Production branch
@@ -31,8 +36,9 @@ What to use it for:
   [`plan/30-promote.md`](../plan/30-promote.md) §6).
 
 The user ID in the connection template's `createdBy`/`lastModifiedBy` and in the stream template's
-`importDirectory` has been replaced with the placeholder `005000000000000AAA`. The values are
-informational, and they're specific to the org the kit was built in.
+`importDirectory` has been replaced with the placeholder `005000000000000AAA`, and the connection
+record ID with `9cg000000000000AAA`. The values are informational, and they're specific to the org
+the kit was built in.
 
 **The tested path builds the kit in the dev sandbox UI** ([`plan/20`](../plan/20-build-data-kit.md))
 and moves it with the commit script and Lifecycle Center. Deploying this folder straight to an org
