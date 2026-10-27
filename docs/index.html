@@ -94,7 +94,7 @@ body { overflow: hidden; }
 .foot .home:hover, .foot .home:focus-visible { color: var(--ink); }
 @media print { .foot .home { display: none; } }
 
-h1 { font-size: 46px; line-height: 1.12; margin: 0 0 28px; font-weight: 700; letter-spacing: -.01em; max-width: 1240px; }
+h1 { font-size: 46px; line-height: 1.12; margin: 0 0 28px; font-weight: 700; letter-spacing: -.01em; }
 h1 .n { display: inline-grid; place-items: center; min-width: 58px; height: 58px; padding: 0 12px; margin-right: 18px; border-radius: 29px; color: #fff; font-size: 30px; vertical-align: 6px; background: var(--c, var(--ink)); }
 .slide[data-org~="dev"] { --c: var(--dev); }
 .slide[data-org~="staging"] { --c: var(--staging); }
@@ -102,7 +102,7 @@ h1 .n { display: inline-grid; place-items: center; min-width: 58px; height: 58px
 .slide[data-org="hub"] { --c: var(--hub); }
 h3 { font-size: 24px; margin: 0 0 10px; }
 p, li { font-size: 23px; line-height: 1.45; }
-p { margin: 0 0 16px; max-width: 64ch; }
+p { margin: 0 0 16px; }
 ul, ol { margin: 0 0 16px; padding-left: 1.1em; }
 li { margin-bottom: 8px; }
 li::marker { color: var(--c, var(--muted)); }
@@ -168,8 +168,8 @@ td code, th code { font-size: .8em; }
 .mermaid { visibility: hidden; } .mermaid[data-processed] { visibility: inherit; }
 
 /* Title slide */
-.title h1 { font-size: 76px; line-height: 1.04; max-width: 1180px; margin: 70px 0 34px; letter-spacing: -.02em; }
-.title .lede { font-size: 30px; line-height: 1.4; max-width: 50ch; color: var(--ink); }
+.title h1 { font-size: 76px; line-height: 1.04; margin: 70px 0 34px; letter-spacing: -.02em; }
+.title .lede { font-size: 30px; line-height: 1.4; color: var(--ink); }
 .title .meta { margin-top: auto; font-size: 19px; color: var(--muted); line-height: 1.6; }
 .section h1 { font-size: 64px; margin-top: 150px; }
 .section p { font-size: 28px; color: var(--muted); }
